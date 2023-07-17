@@ -16,7 +16,14 @@ struct LoginViewModel{
     func loginUser(loginRequest : LoginRequest){
         let validationResult = LoginValidation().Validate(loginRequest: loginRequest)
         if (validationResult.success){
-            //use loginResource to call login API
+            let loginResource = LoginResource()
+            loginResource.loginUser(loginRequest: loginRequest){ (loginApiResponse) in
+                DispatchQueue.main.async {
+                    self.delegate?.didReceiveLoginResponse(loginResponse: loginApiResponse)
+                }
+                
+            }
         }
+        self.delegate?.didReceiveLoginResponse(loginResponse: LoginResponse(errorMessage: validationResult.error, data: nil))
     }
 }
