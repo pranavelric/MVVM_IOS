@@ -10,7 +10,7 @@ import Foundation
 struct LoginValidation{
     
     func Validate(loginRequest: LoginRequest)-> ValidationResult{
-        if(loginRequest.userEmail!.isEmpty){
+        if(loginRequest.userName!.isEmpty){
             return ValidationResult(success: false, error: "User email is empty")
         }
         

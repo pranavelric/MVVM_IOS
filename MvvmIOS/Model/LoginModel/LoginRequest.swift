@@ -9,5 +9,11 @@ import Foundation
 
 struct LoginRequest : Encodable
 {
-    var userEmail, userPassword: String?
+    var userName, userPassword: String?
+    
+    
+    enum CodingKeys: String, CodingKey{
+        case userName = "username"
+        case userPassword = "password"
+    }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E258B722A65861C000F7C89 /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E258B712A65861C000F7C89 /* ApiEndpoints.swift */; };
+		1E258B742A6592BE000F7C89 /* EmployeeResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E258B732A6592BE000F7C89 /* EmployeeResponseModel.swift */; };
 		1E595DF92A6447BE00B4F465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E595DF82A6447BE00B4F465 /* AppDelegate.swift */; };
 		1E595DFB2A6447BE00B4F465 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E595DFA2A6447BE00B4F465 /* SceneDelegate.swift */; };
 		1E595DFD2A6447BE00B4F465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E595DFC2A6447BE00B4F465 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E258B712A65861C000F7C89 /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
+		1E258B732A6592BE000F7C89 /* EmployeeResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeResponseModel.swift; sourceTree = "<group>"; };
 		1E595DF52A6447BE00B4F465 /* MvvmIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvvmIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E595DF82A6447BE00B4F465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E595DFA2A6447BE00B4F465 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		1E595E0C2A6447E800B4F465 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1E258B712A65861C000F7C89 /* ApiEndpoints.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 		1E595E1A2A646BF400B4F465 /* EmployeeModel */ = {
 			isa = PBXGroup;
 			children = (
+				1E258B732A6592BE000F7C89 /* EmployeeResponseModel.swift */,
 			);
 			path = EmployeeModel;
 			sourceTree = "<group>";
@@ -234,10 +240,12 @@
 				1E595E222A6473CB00B4F465 /* HttpUtility.swift in Sources */,
 				1E595E142A64695400B4F465 /* LoginViewModel.swift in Sources */,
 				1E595DFD2A6447BE00B4F465 /* ViewController.swift in Sources */,
+				1E258B742A6592BE000F7C89 /* EmployeeResponseModel.swift in Sources */,
 				1E595DF92A6447BE00B4F465 /* AppDelegate.swift in Sources */,
 				1E595E162A646B2E00B4F465 /* LoginValidation.swift in Sources */,
 				1E595DFB2A6447BE00B4F465 /* SceneDelegate.swift in Sources */,
 				1E595E1C2A646C0600B4F465 /* LoginRequest.swift in Sources */,
+				1E258B722A65861C000F7C89 /* ApiEndpoints.swift in Sources */,
 				1E595E1E2A646C1400B4F465 /* LoginResponse.swift in Sources */,
 				1E595E202A6473B300B4F465 /* LoginResource.swift in Sources */,
 				1E595E182A646B3800B4F465 /* ValidationResult.swift in Sources */,
