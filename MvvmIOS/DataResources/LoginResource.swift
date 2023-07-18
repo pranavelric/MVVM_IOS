@@ -9,13 +9,14 @@ import Foundation
 
 struct LoginResource{
     
-    func loginUser(loginRequest: LoginRequest, completin: @escaping (_ result: LoginResponse?)-> Void){
+    func loginUser(loginRequest: LoginRequest, completetion: @escaping (_ result: LoginResponse?)-> Void){
         let loginUrl = URL(string: ApiEndpoints.login )!
         let httpUtility = HttpUtility()
         do {
+            
             let loginPostBody = try JSONEncoder().encode(loginRequest)
             httpUtility.postApiData(requestUrl: loginUrl, requestBody: loginPostBody, resultType: LoginResponse.self){ (LoginResponse) in
-                _ = completin(LoginResponse)
+                _ = completetion(LoginResponse)
                 
             }
         }catch let error {

@@ -20,7 +20,7 @@ class LoginTextField: UITextField {
     init(placeholderTitle: String){
         super.init(frame: .zero)
        
-        self.frame = CGRect(x: 50, y: 100, width: 200, height: 20)
+        self.frame = CGRect(x: 50, y: 100, width: 350, height: 20)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.borderStyle = .roundedRect
         self.textAlignment = .center

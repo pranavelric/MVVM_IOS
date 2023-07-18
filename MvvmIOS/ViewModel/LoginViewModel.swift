@@ -24,6 +24,8 @@ struct LoginViewModel{
                 
             }
         }
-        self.delegate?.didReceiveLoginResponse(loginResponse: LoginResponse(errorMessage: validationResult.error, data: nil))
+        else{
+            self.delegate?.didReceiveLoginResponse(loginResponse: LoginResponse(userName: nil, userID: nil, email: nil, firstName: nil, lastName: nil, gender: nil, image: nil, token: nil, message: validationResult.error))
+        }
     }
 }

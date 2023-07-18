@@ -16,11 +16,11 @@ class LoginViewController : UIViewController, LoginViewModelDelegate{
     private var loginViewModel = LoginViewModel()
     
     func didReceiveLoginResponse(loginResponse: LoginResponse?) {
-        if(loginResponse?.errorMessage == nil && loginResponse?.data != nil){
+        if(loginResponse?.message == nil && loginResponse?.userID != nil){
             debugPrint("navigate to different view controller")
         }
         else{
-            let alert = UIAlertController(title: Contants.ErrorAlertTitle, message: loginResponse?.errorMessage, preferredStyle: .alert)
+            let alert = UIAlertController(title: Contants.ErrorAlertTitle, message: loginResponse?.message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: Contants.OkAlertTitle,style: .default,handler: nil))
             self.present(alert, animated: true)
         }
@@ -44,7 +44,7 @@ class LoginViewController : UIViewController, LoginViewModelDelegate{
     private func configureUserNameTextField(){
         view.addSubview(userNameTF)
         NSLayoutConstraint.activate([
-                  userNameTF.widthAnchor.constraint(equalToConstant: 350),
+//                  userNameTF.widthAnchor.constraint(equalToConstant: 350),
                   userNameTF.heightAnchor.constraint(equalToConstant: 50),
                   userNameTF.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                   userNameTF.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -75)
@@ -55,7 +55,7 @@ class LoginViewController : UIViewController, LoginViewModelDelegate{
         view.addSubview(passwordTF)
         
         NSLayoutConstraint.activate([
-            passwordTF.widthAnchor.constraint(equalToConstant: 350),
+//            passwordTF.widthAnchor.constraint(equalToConstant: 350),
             passwordTF.heightAnchor.constraint(equalToConstant: 50),
             passwordTF.leadingAnchor.constraint(equalTo: userNameTF.leadingAnchor),
             passwordTF.trailingAnchor.constraint(equalTo: userNameTF.trailingAnchor),
@@ -77,7 +77,8 @@ class LoginViewController : UIViewController, LoginViewModelDelegate{
     }
     
     @objc func loginButtonTapped(){
-        let request = LoginRequest(userName: userNameTF.text,userPassword: userNameTF.text)
+        
+        let request = LoginRequest(userName: userNameTF.text,userPassword: passwordTF.text)
         loginViewModel.loginUser(loginRequest: request)
      }
      

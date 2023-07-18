@@ -7,20 +7,21 @@
 
 import Foundation
 
-struct LoginResponse: Decodable{
-    let errorMessage: String?
-    let data: LoginResponseData?
-}
+//struct LoginResponse: Codable{
+//    let errorMessage: String?
+//    let data: LoginResponseData?
+//}
 
-struct LoginResponseData : Decodable{
-    let userName: String
-    let userID: Int
-    let email : String
-    let firstName: String
-    let lastName: String
-    let gender : String
-    let image : String
-    let token : String
+struct LoginResponse : Codable{
+    let userName: String?
+    let userID: Int?
+    let email : String?
+    let firstName: String?
+    let lastName: String?
+    let gender : String?
+    let image : String?
+    let token : String?
+    let message: String?
     
     enum CodingKeys: String, CodingKey{
         case userName = "username"
@@ -31,6 +32,7 @@ struct LoginResponseData : Decodable{
         case gender
         case image
         case token
+        case message
     }
 }
 

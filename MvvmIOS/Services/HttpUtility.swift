@@ -27,17 +27,17 @@ struct HttpUtility{
     
     
     func postApiData<T: Decodable>(requestUrl:URL, requestBody: Data, resultType: T.Type,completionHandler: @escaping(_ result:T?)->Void){
-        
         var urlRequest =  URLRequest(url: requestUrl)
-        urlRequest.httpMethod = "post"
+        urlRequest.httpMethod = "POST"
         urlRequest.httpBody = requestBody
-        urlRequest.addValue("application/json", forHTTPHeaderField: "content-type")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         URLSession.shared.dataTask(with: urlRequest){(responseData, httpResponse,error) in
-            
             if( responseData != nil && responseData?.count != 0){
                 let decoder = JSONDecoder()
+                
                 do{
                     let result =  try decoder.decode(T.self, from: responseData!)
+                    let jsonDecoder = JSONDecoder()
                     completionHandler(result)
                 }
                 catch let error{
