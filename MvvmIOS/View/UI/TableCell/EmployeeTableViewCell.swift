@@ -51,13 +51,14 @@ class EmployeeTableViewCell: UITableViewCell {
     // Employee model object
     var employee :EmployeeModel?{
         didSet{
-            
+            configureCell()
         }
     }
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = .blue
         setupUI()
         configureGestureRecognizer()
     }
@@ -132,5 +133,20 @@ class EmployeeTableViewCell: UITableViewCell {
     @objc private func cellTapped(){
         isExpanded.toggle()
     }
+    
+    // MARK: - Cell Configuration
+    
+    private func configureCell() {
+        guard let employee = employee else {
+            return
+        }
+        let imageURL = NSURL(string: employee.image ?? "")
+        let imagedData = NSData(contentsOf: imageURL! as URL)!
+        profileImageView.image = UIImage(data: imagedData as Data)
+//        profileImageView.image = UIImage(named: employee.image)
+        nameLabel.text = "\(employee.firstName!) \(employee.lastName!)"
+        contactDetailsLabel.text = "Phone: \(employee.phone!)\nEmail: \(employee.email!)\nAddress: \(employee.address!)"
+    }
+    
 
 }

@@ -20,7 +20,7 @@ class EmployeeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-           view.backgroundColor = .systemBackground
+           view.backgroundColor = .red
 
            employeeViewModel.delegate = self
            fetchData()
@@ -32,6 +32,12 @@ class EmployeeViewController: UIViewController {
         employeeViewModel.fetchUser()
     }
     private func setupUI(){
+//        let screenSize: CGRect = view.bounds
+//            
+//            let screenWidth = screenSize.width
+//            let screenHeight = screenSize.height
+//     
+//            tableView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
         view.addSubview(tableView)
  
                 
@@ -46,9 +52,9 @@ class EmployeeViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
-    @objc func buttonTapped() {
-        // Handle button tap action
-    }
+//    @objc func buttonTapped() {
+//        // Handle button tap action
+//    }
 
 
 }

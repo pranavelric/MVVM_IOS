@@ -4,7 +4,8 @@
 //
 //  Created by Pranav Choudhary on 19/07/23.
 //
-
+//username: 'kminchelle',
+//password: '0lelplR',
 import Foundation
 import UIKit
 
@@ -26,7 +27,7 @@ extension EmployeeViewController : UITableViewDelegate, UITableViewDataSource, E
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        employees.count
+        return employees.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
