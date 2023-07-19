@@ -8,23 +8,12 @@
 import Foundation
 import UIKit
 
-class LoginViewController : UIViewController, LoginViewModelDelegate{
+class LoginViewController : UIViewController{
     
     private let userNameTF : UITextField = LoginTextField(placeholderTitle: "Enter username")
     private let passwordTF : UITextField = LoginTextField(placeholderTitle: "Enter password")
     private let loginButton: UIButton = LoginAppButton(bacgroundColor: .green, title: "Login", systemImageName: "list.bullet")
     private var loginViewModel = LoginViewModel()
-    
-    func didReceiveLoginResponse(loginResponse: LoginResponse?) {
-        if(loginResponse?.message == nil && loginResponse?.userID != nil){
-            debugPrint("navigate to different view controller")
-        }
-        else{
-            let alert = UIAlertController(title: Contants.ErrorAlertTitle, message: loginResponse?.message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: Contants.OkAlertTitle,style: .default,handler: nil))
-            self.present(alert, animated: true)
-        }
-    }
     
    
     override func viewDidLoad() {
@@ -44,7 +33,7 @@ class LoginViewController : UIViewController, LoginViewModelDelegate{
     private func configureUserNameTextField(){
         view.addSubview(userNameTF)
         NSLayoutConstraint.activate([
-//                  userNameTF.widthAnchor.constraint(equalToConstant: 350),
+                  userNameTF.widthAnchor.constraint(equalToConstant: 350),
                   userNameTF.heightAnchor.constraint(equalToConstant: 50),
                   userNameTF.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                   userNameTF.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -75)

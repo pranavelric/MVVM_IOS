@@ -22,6 +22,12 @@
 		1E595E1E2A646C1400B4F465 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E595E1D2A646C1400B4F465 /* LoginResponse.swift */; };
 		1E595E202A6473B300B4F465 /* LoginResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E595E1F2A6473B300B4F465 /* LoginResource.swift */; };
 		1E595E222A6473CB00B4F465 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E595E212A6473CB00B4F465 /* HttpUtility.swift */; };
+		1E5B14CB2A66DADB0014D3EF /* LoginVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B14CA2A66DADB0014D3EF /* LoginVCExtension.swift */; };
+		1E5B14CD2A66DE9C0014D3EF /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B14CC2A66DE9C0014D3EF /* EmployeeViewController.swift */; };
+		1E5B14D02A66DF060014D3EF /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B14CF2A66DF060014D3EF /* EmployeeTableViewCell.swift */; };
+		1E869B2A2A681AA000FD31F1 /* EmployeeVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E869B292A681AA000FD31F1 /* EmployeeVCExtension.swift */; };
+		1E869B2C2A681F6000FD31F1 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E869B2B2A681F6000FD31F1 /* EmployeeViewModel.swift */; };
+		1E869B2E2A68207800FD31F1 /* EmployeeResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E869B2D2A68207800FD31F1 /* EmployeeResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		1E595E1D2A646C1400B4F465 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		1E595E1F2A6473B300B4F465 /* LoginResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResource.swift; sourceTree = "<group>"; };
 		1E595E212A6473CB00B4F465 /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
+		1E5B14CA2A66DADB0014D3EF /* LoginVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCExtension.swift; sourceTree = "<group>"; };
+		1E5B14CC2A66DE9C0014D3EF /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		1E5B14CF2A66DF060014D3EF /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		1E869B292A681AA000FD31F1 /* EmployeeVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeVCExtension.swift; sourceTree = "<group>"; };
+		1E869B2B2A681F6000FD31F1 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		1E869B2D2A68207800FD31F1 /* EmployeeResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 		1E258B772A659FC5000F7C89 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1E5B14CE2A66DEE90014D3EF /* TableCell */,
 				1E258B782A659FEF000F7C89 /* LoginAppButton.swift */,
 				1E258B7A2A65A0DA000F7C89 /* LoginTextField.swift */,
 			);
@@ -110,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				1E595E1F2A6473B300B4F465 /* LoginResource.swift */,
+				1E869B2D2A68207800FD31F1 /* EmployeeResource.swift */,
 			);
 			path = DataResources;
 			sourceTree = "<group>";
@@ -143,8 +157,10 @@
 		1E595E112A64693200B4F465 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1E5B14C92A66DAC50014D3EF /* Extensions */,
 				1E258B772A659FC5000F7C89 /* UI */,
 				1E258B752A659ABB000F7C89 /* LoginViewController.swift */,
+				1E5B14CC2A66DE9C0014D3EF /* EmployeeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				1E595E132A64695400B4F465 /* LoginViewModel.swift */,
+				1E869B2B2A681F6000FD31F1 /* EmployeeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -172,6 +189,23 @@
 				1E258B732A6592BE000F7C89 /* EmployeeResponseModel.swift */,
 			);
 			path = EmployeeModel;
+			sourceTree = "<group>";
+		};
+		1E5B14C92A66DAC50014D3EF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E5B14CA2A66DADB0014D3EF /* LoginVCExtension.swift */,
+				1E869B292A681AA000FD31F1 /* EmployeeVCExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1E5B14CE2A66DEE90014D3EF /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				1E5B14CF2A66DF060014D3EF /* EmployeeTableViewCell.swift */,
+			);
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,15 +278,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E595E222A6473CB00B4F465 /* HttpUtility.swift in Sources */,
+				1E5B14D02A66DF060014D3EF /* EmployeeTableViewCell.swift in Sources */,
 				1E595E142A64695400B4F465 /* LoginViewModel.swift in Sources */,
 				1E258B742A6592BE000F7C89 /* EmployeeResponseModel.swift in Sources */,
 				1E595DF92A6447BE00B4F465 /* AppDelegate.swift in Sources */,
 				1E258B792A659FEF000F7C89 /* LoginAppButton.swift in Sources */,
 				1E595E162A646B2E00B4F465 /* LoginValidation.swift in Sources */,
+				1E5B14CD2A66DE9C0014D3EF /* EmployeeViewController.swift in Sources */,
 				1E595DFB2A6447BE00B4F465 /* SceneDelegate.swift in Sources */,
+				1E5B14CB2A66DADB0014D3EF /* LoginVCExtension.swift in Sources */,
 				1E595E1C2A646C0600B4F465 /* LoginRequest.swift in Sources */,
 				1E258B722A65861C000F7C89 /* ApiEndpoints.swift in Sources */,
+				1E869B2A2A681AA000FD31F1 /* EmployeeVCExtension.swift in Sources */,
+				1E869B2E2A68207800FD31F1 /* EmployeeResource.swift in Sources */,
 				1E595E1E2A646C1400B4F465 /* LoginResponse.swift in Sources */,
+				1E869B2C2A681F6000FD31F1 /* EmployeeViewModel.swift in Sources */,
 				1E595E202A6473B300B4F465 /* LoginResource.swift in Sources */,
 				1E258B762A659ABB000F7C89 /* LoginViewController.swift in Sources */,
 				1E595E182A646B3800B4F465 /* ValidationResult.swift in Sources */,

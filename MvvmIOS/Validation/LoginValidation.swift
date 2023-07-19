@@ -14,7 +14,7 @@ struct LoginValidation{
             return ValidationResult(success: false, error: "User email is empty")
         }
         if(loginRequest.userPassword!.isEmpty){
-            print("here")
+
             return ValidationResult(success: false, error: "User password is empty")
         }
         return ValidationResult(success: true, error: nil) 

@@ -10,8 +10,10 @@ import Foundation
 struct HttpUtility{
     
     func getApiData<T: Decodable>(requestUrl:URL, resultType: T.Type,completionHandler: @escaping(_ result:T?)->Void){
+        
+        
         URLSession.shared.dataTask(with: requestUrl){(responseData, httpResponse,error) in
-            
+           
             if(error==nil && responseData != nil && responseData?.count != 0){
                 let decoder = JSONDecoder()
                 do{
